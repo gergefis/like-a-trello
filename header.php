@@ -3,7 +3,7 @@ echo '
 <h1>Πλατφόρμα Διαχείρισης Εργασιών</h1>
 
 <!-- Menu -->
-<nav > <!-- class="navbar"-->
+<nav class="navbar"> <!-- class="navbar"-->
   <ul>
 
   <li>

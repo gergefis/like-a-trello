@@ -61,5 +61,6 @@
     <!-- Kalούμε το footer.php για κάθε σελίδα -->
     <?php include('footer.php');?>
   </footer>
+  <script src="script/script.js"></script>
 </body>
 </html>
