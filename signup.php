@@ -19,7 +19,7 @@
 
   <main>
     <div id="register">
-      <form name="registerform" id="registerform" action="#" method="post">
+      <form name="registerform" id="registerform" action="includes/formhandler.inc.php" method="post">
         <div class="register">
           <h1>Εγγραφή χρήστη</h1>
           <p>
