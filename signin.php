@@ -36,7 +36,7 @@
         <input type="hidden" name="testcookie" value="1">
       </p>
       <div class="signup">
-        <a href="signup.php" rel="signup">Εγγραφή νέου χρήστη</a>
+        <a href="register.php" rel="register">Εγγραφή νέου χρήστη</a>
       </div>
     </div>
   </div>
