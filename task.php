@@ -53,11 +53,11 @@
   </main>
 
   <footer>
-        <!-- Kalούμε το footer.php για κάθε σελίδα -->
+        <!-- καλεί το footer.php για κάθε σελίδα -->
     <?php 
       include("footer.php");
     ?>
   </footer>
-  <script src="script/script.js"></script>
+  <script src="script/active_label.js"></script>
 </body>
 </html>

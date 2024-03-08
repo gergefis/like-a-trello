@@ -43,7 +43,7 @@ input#user_register.input, #user_mail.input,
   font-size: 14px;
 }
 
-span#confirm_pwd_message{
+span#confirm_pwd_message,#confirm_mail_message{
   display: block;
   color: red;
   font-size: 12px;

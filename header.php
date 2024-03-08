@@ -3,7 +3,7 @@ echo '
 <h1>Πλατφόρμα Διαχείρισης Εργασιών</h1>
 
 <!-- Menu -->
-<nav class="navbar"> <!-- class="navbar"-->
+<nav class="navbar"> 
   <ul>
 
   <li>
@@ -12,18 +12,20 @@ echo '
   </li>
 
   <li class="nav-item" id="home">
-    <a href="index.php">Αρχική</a>
+    <a id="home_action" href="index.php">Αρχική</a>
   </li>
 
   <li class="nav-item" id="task">
-    <a href="task.php">Λίστα Εργασιών</a>
+    <a id="list-action" href="task.php">Λίστα Εργασιών</a>
   </li>
 
   <li class="nav-item" id="group">
-  <a href="group.php">Ομάδες</a>
+  <a id="group_action" href="group.php">Ομάδες</a>
   </li>
 
   <a href="signin.php"><button>Είσοδος</button></a>
 </ul>
-</nav>
-</header>';
+</nav>';
+
+// Include your script file
+// echo '<script src="action_label.js"></script>';

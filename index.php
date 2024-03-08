@@ -6,7 +6,6 @@
   <title>Like a Trello</title>
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/navbar.css">
-
 </head>
 <body>
   <header>
@@ -37,6 +36,6 @@
     <?php include('footer.php'); ?>
   </footer>
   <!-- Φορτώνουμε τα αρχεία script -->
-  <script src="script/script.js"></script>
+  <script src="script/active_label.js"></script>
 </body>
 </html>
