@@ -26,7 +26,7 @@
     <!-- Κουμπιά Είσοδου / Εγγραφής -->
     <div class="button-container">
       <a class="button" href="signin.php">Είσοδος</a>
-      <a class="button" href="register.php">Εγγραφή</a>
+      <a class="assign-task-button" href="register.php">Εγγραφή</a>
     </div>
     
   </main>
