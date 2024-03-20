@@ -33,7 +33,7 @@ p .submit{
   max-width: 100%;
 }
 input#user_register.input, #user_mail.input, 
-      #user_pwd.input, #confirm_pwd.input{
+      #user_pwd.input, #confirm_pwd.input,#username_register.input{
   border: 0.0625rem solid rgb(201, 196, 196);
   padding: 0 80px 16px 0;
   margin: 3px 5px;
@@ -43,7 +43,7 @@ input#user_register.input, #user_mail.input,
   font-size: 14px;
 }
 
-span#confirm_pwd_message,#confirm_mail_message{
+span#confirm_pwd_message,#confirm_mail_message,#duplicate_username{
   display: block;
   color: red;
   font-size: 12px;

@@ -32,7 +32,7 @@
   </main>
 
   <footer>
-    <!-- Kalούμε το footer.php για κάθε σελίδα -->
+    <!-- Καλούμε το footer.php για κάθε σελίδα -->
     <?php include('footer.php'); ?>
   </footer>
   <!-- Φορτώνουμε τα αρχεία script -->

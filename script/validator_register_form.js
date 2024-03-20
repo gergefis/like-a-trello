@@ -2,11 +2,11 @@
 // **********************************
 
 // Check if fields have been completed
-function validateForm(username, email, password, confirm_password){
+function validateForm(username, name, email, password, confirm_password){
   
     // var fillout_form_msg = document.getElementById("fillout_message");
   
-    if (username == "" || email == "" || password == "" || confirm_password == "") {
+    if (username == "" || name == "" || email == "" || password == "" || confirm_password == "") {
       alert("Παρακαλώ συμπληρώστε όλα τα πεδία της φόρμας εγγραφής.");
       return false
     }

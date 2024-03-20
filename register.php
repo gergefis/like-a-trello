@@ -1,3 +1,9 @@
+<?php
+  require_once 'includes/register_view.php';
+  require_once 'includes/config_session.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,10 +24,18 @@
 
   <main>
     <div id="register">
-      <form name="registerform" id="registerform" action="includes/formhandler.inc.php" method="post" onsubmit="return validateForm(this.user_register.value, this.user_mail.value, this.user_pwd.value, this.confirm_pwd.value)">
-      <!-- > -->
+      <form name="registerform" id="registerform" 
+      action="includes/formhandler.inc.php" method="post" onsubmit="return validateForm(this.username_register.value,  this.user_register.value, this.user_mail.value, this.user_pwd.value, this.confirm_pwd.value)"> 
+
         <div class="register" >
           <h1>Εγγραφή χρήστη</h1>
+          <label for="username_register">Username:</label>
+          <input type="text" name="username_register" id="username_register" class="input" autocomplete="username">
+          <!-- TODO- Form error message under username fields -->
+          <span id="duplicate_username">
+          
+         </span>
+        </p>
           <p>
           <label for="user_register">Όνομα Χρήστη:</label>
           <input type="text" name="user_register" id="user_register" class="input" autocomplete="username">
@@ -29,7 +43,7 @@
         <label for="user_mail">Email:</label>
         <input type="email" name="user_mail" id="user_mail" class="input" onkeyup="checkMail(user_mail)">
         <span id="confirm_mail_message"></span> 
-        <!-- _mail_ -->
+
         <p>
           <label for="user_pwd">Κωδικός Πρόσβασης:</label>
           <input type="password" name="user_pwd" id="user_pwd" class="input" onkeyup="checkPassword(user_pwd, confirm_pwd)">
@@ -46,6 +60,11 @@
         </p>
         </div>
       </form>
+
+      <?php
+      check_register_errors();
+      ?>
+
     </div>
     
   </main>

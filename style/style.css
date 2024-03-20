@@ -161,6 +161,7 @@ text-align: center;
   cursor: pointer;
   border-radius: 4px ;
 }
+
 .button:hover{
   display: inline-block;
   background-color: #000;
@@ -231,8 +232,15 @@ input#new-group{
   text-decoration: none;
   border: none;
   cursor: pointer;
-  border-radius: 4px ;
+  border-radius: 4px;
 }
+
+/* TODO register Button Hover
+div.assign-task-button a:hover {
+  background-color: #000;
+  cursor: pointer;
+  border-radius: 4px;
+}  */
 
 div.create-task{
   display: flex;
