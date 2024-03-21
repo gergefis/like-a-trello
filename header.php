@@ -23,7 +23,7 @@ echo '
   <a id="group_action" href="group.php">Ομάδες</a>
   </li>
 
-  <a href="signin.php"><button>Είσοδος</button></a>
+  <a href="login.php"><button>Είσοδος</button></a>
 </ul>
 </nav>';
 

@@ -32,7 +32,7 @@ p{
 p .submit{
   max-width: 100%;
 }
-input#user_login.input, #user_pass.input{
+input#user_login, #user_pwd{
   border: 0.0625rem solid rgb(201, 196, 196);
   padding: 0 80px 16px 0;
   margin: 3px 5px;

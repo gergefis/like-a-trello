@@ -1,6 +1,5 @@
 <?php 
-
-declare(strict_types=1);
+  declare(strict_types=1);
 
 
 //BEGIN - Check in DB if username already exist
@@ -11,10 +10,11 @@ function get_username(object $pdo, string $username)
   $stmt->bindParam(":username", $username);
   $stmt->execute();
 
-  //return the result from DB search for same username
+  //return the result from DB after searching for same username
   $result = $stmt->fetch(PDO::FETCH_ASSOC);
   return $result;
 }
+
 function get_email(object $pdo, string $email)
 {
   $search_email = "SELECT email FROM users WHERE email = :email;";
@@ -22,15 +22,15 @@ function get_email(object $pdo, string $email)
   $stmt->bindParam(":email", $email);
   $stmt->execute();
 
-  //return the result from DB search for same username
+  //return the result from DB after searching for existing mail
   $result = $stmt->fetch(PDO::FETCH_ASSOC);
   return $result;
 }
 //END - Check in DB if username already exist
 
 // crate user in DB after successfull registration
-function set_user($pdo, string $name, string $username, string $password,string $email){
-  $query = "INSERT INTO users (name, username, password, email) VALUES (:name, :username, :password, :email);";
+function set_user(object $pdo, string $username, string $name, string $password, string $email){
+  $query = "INSERT INTO users (username, name, password, email) VALUES (:username, :name, :password, :email);";
 
 
   // create actualy statment
@@ -42,9 +42,8 @@ function set_user($pdo, string $name, string $username, string $password,string 
   ];
   $hashedPwd = password_hash($password, PASSWORD_BCRYPT , $option);
   /**************************************************************** */
-  
-  $stmt->bindParam(":name", $name);
   $stmt->bindParam(":username", $username);
+  $stmt->bindParam(":name", $name);
   $stmt->bindParam(":password", $hashedPwd); //secure password
   $stmt->bindParam(":email", $email);
 

@@ -48,3 +48,8 @@ span#confirm_pwd_message,#confirm_mail_message,#duplicate_username{
   color: red;
   font-size: 12px;
 }
+span.form-success{
+  display: block;
+  color: rgb(6, 82, 6);
+  font-size: 20px;
+}

@@ -12,6 +12,17 @@ function validateForm(username, name, email, password, confirm_password){
     }
     return true;
   }
+
+  function validateLoginForm(username, password){
+  
+    // var fillout_form_msg = document.getElementById("fillout_message");
+  
+    if (username == "" || password == "" ) {
+      alert("Παρακαλώ συμπληρώστε όλα τα πεδία της φόρμας εγγραφής.");
+      return false
+    }
+    return true;
+  }
   
   // Checking password validation
   function checkPassword(password, confirm_password) {

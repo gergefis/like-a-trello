@@ -19,7 +19,7 @@ function is_email_registered(object $pdo, string $email)
     return false;
   }
 }
-function create_user(object $pdo, string $name, string $username, string $password,string $email)
+function create_user(object $pdo, string $username, string $name, string $password, string $email)
 {
-  set_user($pdo, $name, $username, $password, $email);
+  set_user($pdo, $username, $name, $password, $email);
 }

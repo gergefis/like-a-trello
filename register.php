@@ -1,6 +1,6 @@
 <?php
-  require_once 'includes/register_view.php';
   require_once 'includes/config_session.php';
+  require_once 'includes/register_view.php';
 ?>
 
 
@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/register.css">
   <link rel="stylesheet" href="style/navbar.css">
+  <script defer src="script/validator_register_form.js"></script>
+
 </head>
 <body>
   <header>
@@ -28,12 +30,16 @@
       action="includes/formhandler.inc.php" method="post" onsubmit="return validateForm(this.username_register.value,  this.user_register.value, this.user_mail.value, this.user_pwd.value, this.confirm_pwd.value)"> 
 
         <div class="register" >
+        <span id="duplicate_username">
+            <!-- Show error message if username allready exist -->
+            <?php
+              check_register_errors();
+            ?>
+         </span>
           <h1>Εγγραφή χρήστη</h1>
           <label for="username_register">Username:</label>
           <input type="text" name="username_register" id="username_register" class="input" autocomplete="username">
-          <!-- TODO- Form error message under username fields -->
-          <span id="duplicate_username">
-          
+          <span id="username_register">
          </span>
         </p>
           <p>
@@ -42,7 +48,8 @@
         </p>
         <label for="user_mail">Email:</label>
         <input type="email" name="user_mail" id="user_mail" class="input" onkeyup="checkMail(user_mail)">
-        <span id="confirm_mail_message"></span> 
+        <span id="confirm_mail_message">
+        </span> 
 
         <p>
           <label for="user_pwd">Κωδικός Πρόσβασης:</label>
@@ -58,12 +65,11 @@
           <input type="hidden" name="redirect_to" value="/">
           <input type="hidden" name="testcookie" value="1">
         </p>
+        <?php
+              check_register_errors();
+            ?>
         </div>
       </form>
-
-      <?php
-      check_register_errors();
-      ?>
 
     </div>
     
@@ -75,6 +81,5 @@
       include("footer.php"); 
     ?>
   </footer>
-  <script src="script/validator_register_form.js"></script>
 </body>
 </html>
